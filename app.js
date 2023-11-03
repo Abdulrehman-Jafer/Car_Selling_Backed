@@ -13,12 +13,12 @@ app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("./images"));
 
-//Entry route
-app.use("/", (req, res, next) => res.json(Date.now()));
-
 app.use("/user", userRoute);
 
 app.use("/car", carRoute);
+
+//Entry route
+app.use("/", (req, res, next) => res.json(Date.now()));
 
 app.use("*", handle404);
 
