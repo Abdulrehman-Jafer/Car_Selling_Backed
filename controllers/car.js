@@ -17,6 +17,7 @@ export const createCar = async (req, res, error) => {
       },
     });
   } catch (error) {
+    res.status(500).json(error);
     next(error);
   }
 };
