@@ -9,7 +9,7 @@ import mongoose from "mongoose";
 
 const app = express();
 config();
-app.use(cors("*"));
+app.use(cors());
 app.use(express.json());
 app.use("/images", express.static("./images"));
 
