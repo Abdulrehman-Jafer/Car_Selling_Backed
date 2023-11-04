@@ -8,16 +8,20 @@ import cors from "cors";
 import mongoose from "mongoose";
 
 const app = express();
+
 config();
+
 app.use(cors());
+
 app.use(express.json());
+
 app.use("/images", express.static("./images"));
 
+//Routes
 app.use("/user", userRoute);
 
 app.use("/car", carRoute);
 
-//Entry route
 app.use("/", (req, res, next) => res.json(Date.now()));
 
 app.use("*", handle404);

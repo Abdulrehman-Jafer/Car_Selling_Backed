@@ -7,11 +7,15 @@ const schema = new Schema(
       required: true,
     },
     price: {
-      type: String,
+      type: Number,
       required: true,
     },
     phone: {
       type: String,
+      required: true,
+    },
+    numberOfPics: {
+      type: Number,
       required: true,
     },
     images: {
